@@ -1,0 +1,298 @@
+/* Variabel Warna & Font Kustom */
+:root {
+  --primary-font: "Poppins", sans-serif;
+  --secondary-font: "Lora", serif;
+  --dark-blue: #394f64;
+  --button-bg: #324774;
+  --problem-bg: #e3d8d5; /* Warna coklat muda */
+  --get-it-bg: #f7e4e6; /* Warna pink muda */
+}
+
+/* Kontainer utama yang membungkus video dan konten */
+#hero-section-video-bg {
+  position: relative; /* Wajib ada agar elemen anak (video) bisa diposisikan absolut terhadapnya */
+  height: 100vh; /* Mengatur tinggi agar memenuhi layar */
+  display: flex; /* Menggunakan flexbox untuk menengahkan konten */
+  overflow: hidden; /* Mencegah video keluar dari batas kontainer */
+  color: white; /* Mengatur warna teks default menjadi putih */
+}
+
+/* Kontainer untuk video */
+.video-background {
+  position: absolute; /* Posisi absolut agar bisa diletakkan di belakang konten */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2; /* Pindah ke lapisan paling belakang */
+}
+
+/* Gaya untuk video itu sendiri */
+.video-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Memastikan video menutupi seluruh area tanpa distorsi */
+  filter: blur(
+    5px
+  ); /* EFEK BLUR: Ubah nilai '5px' untuk menambah atau mengurangi blur */
+}
+
+/* (Opsional tapi direkomendasikan) Lapisan gelap di atas video agar teks lebih terbaca */
+.video-background::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.4
+  ); /* Warna hitam dengan 40% transparansi */
+  z-index: -1; /* Posisi di antara video dan konten teks */
+}
+
+/* Memastikan konten teks berada di lapisan paling depan */
+#hero-section-video-bg .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Gaya Umum */
+body {
+  font-family: var(--primary-font);
+  color: #565749;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.logo,
+.section-title {
+  font-family: var(--secondary-font);
+  color: var(--dark-blue);
+}
+
+/* CSS untuk mengatur logo */
+.logo-di-navbar {
+  /* Menentukan ukuran gambar */
+  height: 65px; /* Anda bisa sesuaikan ukurannya */
+  width: auto; /* Lebar akan menyesuaikan otomatis */
+
+  /* Menentukan posisi gambar */
+  position: absolute; /* Posisi absolut terhadap body */
+  top: 15px; /* Jarak dari atas */
+  left: 15px; /* Jarak dari kiri */
+}
+
+/* Menghilangkan margin default dari body */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Menetapkan tinggi minimal untuk navbar */
+.navbar {
+  min-height: 80px;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='black' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Mengubah warna border di sekitar tombol saat tidak aktif (opsional) */
+.navbar-toggler {
+  border-color: #486aa8;
+}
+
+/* Mengubah warna border saat tombol di-klik (opsional) */
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.25rem #486aa8;
+}
+
+#hero-section-courses .navbar {
+  /* Menggunakan variabel warna --dark-blue yang sudah Anda definisikan */
+  background-color: #f7faf7; /* Powder Blue */
+  color: #f7faf7; /* Dark Blue Text */
+}
+
+.navbar a {
+  color: #f7faf7;
+}
+
+.btn-secondary-custom:hover {
+  background-color: #486aa8;
+  color: white;
+  border-color: #324774;
+}
+
+.btn-outline-light {
+  background-color: #486aa8;
+  color: aliceblue;
+}
+
+.btn-outline-custom {
+  color: var(--button-bg);
+  border-color: var(--button-bg);
+}
+.btn-outline-custom:hover {
+  background-color: var(--button-bg);
+  color: white;
+  border-color: var(--button-bg);
+}
+
+#hero-section-courses .logo,
+#hero-section-courses .text-white {
+  color: #ffffff !important;
+}
+
+.logo {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Warna default untuk link Home, Courses, Resources */
+.navbar-nav .nav-link {
+  color: #003366 !important; /* Warna biru tua */
+  font-weight: 600; /* Membuat teks sedikit lebih tebal */
+  transition: color 0.3s ease; /* Transisi warna yang halus */
+}
+
+/* Warna saat kursor mouse di atas link */
+.navbar-nav .nav-link:hover {
+  color: #e0de5b !important; /* Warna biru yang lebih cerah saat disentuh mouse */
+}
+
+/* Warna untuk link yang sedang aktif (misal: Home) */
+.navbar-nav .nav-link.active {
+  color: #e0de5b !important; /* Warna berbeda untuk menandakan halaman aktif */
+  font-weight: bold; /* Membuatnya lebih tebal */
+}
+
+/* Tombol Kustom */
+.btn-outline-light {
+  background-color: #486aa8;
+  color: aliceblue;
+}
+
+.btn-secondary-custom {
+  background-color: var(--button-bg);
+  color: rgb(218, 189, 59);
+  padding: 12px 30px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.btn-secondary-custom:hover {
+  background-color: #486aa8;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Bagian "Here's the problem..." */
+.problem-section {
+  background-color: #66bcb4;
+}
+.problem-list {
+  font-family: var(--secondary-font);
+  font-size: 1.25rem;
+}
+.problem-list li {
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 25px;
+}
+.problem-list li::before {
+  content: "•";
+  color: var(--dark-blue);
+  position: absolute;
+  left: 0;
+  font-size: 1.5rem;
+  line-height: 1.25rem;
+}
+
+/* Bagian "I get it!" */
+.i-get-it-section {
+  background-color: #66bcb4;
+}
+
+/* Daftar Centang Kustom */
+.custom-checklist li {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: flex-start;
+}
+.custom-checklist i {
+  color: #a03c78; /* Warna ungu-pink untuk centang */
+  margin-right: 15px;
+  font-size: 1.2rem;
+}
+
+/* Bagian "This is for you if..." */
+.for-you-section {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("fp.JPG");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Efek parallax sederhana */
+}
+.custom-checklist-light li {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: flex-start;
+}
+.custom-checklist-light i {
+  margin-right: 15px;
+  font-size: 1.2rem;
+}
+.custom-checklist-light .bi-check-lg {
+  color: #83d49b; /* Warna hijau untuk centang */
+}
+.custom-checklist-light .bi-x-lg {
+  color: #e87b7b; /* Warna merah untuk silang */
+}
+.cta-final-box {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+}
+.cta-final-box h2,
+.cta-final-box p {
+  color: white;
+}
+
+/* Kelas untuk Animasi Scroll Fade-in */
+.fade-in-element {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-element.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* HAPUS .hero-courses LAMA DAN GANTI DENGAN KODE INI */
+
+#hero-section-courses {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Membuat tinggi section 100% dari tinggi layar */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("image/tugujogja.jpg");
+  background-size: cover;
+  background-position: center; /* Posisikan gambar di tengah */
+  background-repeat: no-repeat;
+}

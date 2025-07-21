@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bantuan - MoneyTracker</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link href="budget.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0pReHqBw/s8qK6fKzL6ZpXf8L+q8h5W+7tH2T6g2E/p6tP6fF6R6+w6j6Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+
+   <nav class="navbar navbar-expand-lg navbar-bg-custom">
+        <div class="container-fluid">
+          <a class="navbar-brand logo" href="#">
+            <img
+              src="logomt-removebg-preview.png"
+              alt="Logo Perusahaan"
+              class="logo-di-navbar"
+            />
+          </a>
+            
+        </div>
+    </nav>
+
+     <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block sidebar collapse">
+                <div class="position-sticky pt-3">
+                    <div class="sidebar-profile">
+                        <img src="user.jpeg" alt="User Avatar" class="img-fluid">
+                        <div class="profile-name">Katarina</div>
+                        <div class="profile-email">katarina@gmail.com</div>
+                    </div>
+
+                    <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted text-uppercase">
+                        <span>Manajemen Akun</span>
+                    </h6>
+                    <ul class="nav flex-column mb-2">
+                        <li class="nav-item">
+                            <a class="nav-link" href="account.html">
+                                <i class="fas fa-coins"></i> Akun Keuangan
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="edit2.html">
+                                <i class="fas fa-user-circle"></i> Edit Profil
+                            </a>
+                        </li>
+
+                     <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted text-uppercase">
+                        <span>Lainnya</span>
+                    </h6>
+                    <ul class="nav flex-column mb-2">
+                         <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">
+                                <i class="fas fa-question-circle"></i> Bantuan & Dukungan
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-sign-out-alt"></i> Keluar
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <div class="d-flex justify-content-between align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">Bantuan & FAQ</h1>
+                </div>
+
+                <div class="text-center mb-5">
+                    <p class="lead">Temukan jawaban cepat untuk pertanyaan umum mengenai penggunaan MoneyTracker.</p>
+                </div>
+
+                <h3 class="mb-4">Pertanyaan yang Sering Diajukan</h3>
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item faq-item-card">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                Bagaimana cara menambahkan transaksi pemasukan?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Untuk menambahkan pemasukan, buka halaman Dashboard atau Home, lalu klik tombol "Tambah Transaksi". Pastikan Anda memilih jenis transaksi "Pemasukan" dan masukkan detail yang diperlukan.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item faq-item-card">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Bisakah saya mengatur pengingat untuk pembayaran tagihan?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Saat ini, fitur pengingat tagihan belum tersedia. Namun, Anda dapat secara manual mencatat tanggal jatuh tempo di bagian catatan transaksi Anda. Kami terus mengembangkan fitur baru!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item faq-item-card">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Bagaimana cara melihat laporan pengeluaran bulanan?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Anda dapat melihat laporan pengeluaran bulanan secara terperinci di halaman 'Dashboard' atau 'History'. Pilih filter tanggal atau bulan yang ingin Anda lihat.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item faq-item-card">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                Apakah data keuangan saya aman di MoneyTracker?
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Keamanan data Anda adalah prioritas utama kami. MoneyTracker menggunakan enkripsi standar industri dan praktik keamanan terbaik untuk melindungi informasi finansial Anda.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-5 py-4 bg-light rounded shadow-sm">
+                    <p class="mb-0 text-muted">Jika Anda memiliki pertanyaan lain, silakan hubungi tim dukungan kami melalui email di support@moneytracker.com.</p>
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+  </body>
+</html>

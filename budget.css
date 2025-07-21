@@ -1,0 +1,165 @@
+body {
+  background-color: rgb(204, 223, 226);
+  color: #121a22;
+}
+
+.container {
+  background-color: rgb(253, 252, 252);
+}
+
+.logo-di-navbar {
+  height: 65px;
+  width: auto;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+.navbar {
+  min-height: 80px;
+}
+
+#hero-section .navbar {
+  color: #003366;
+}
+/* Warna default untuk link Home, Courses, Resources */
+.navbar-nav .nav-link {
+  color: #003366 !important; /* Warna biru tua */
+  font-weight: 600; /* Membuat teks sedikit lebih tebal */
+  transition: color 0.3s ease; /* Transisi warna yang halus */
+}
+
+/* Warna saat kursor mouse di atas link */
+.navbar-nav .nav-link:hover {
+  color: #e0de5b !important; /* Warna biru yang lebih cerah saat disentuh mouse */
+}
+
+/* Warna untuk link yang sedang aktif (misal: Home) */
+.navbar-nav .nav-link.active {
+  color: #e0de5b !important; /* Warna berbeda untuk menandakan halaman aktif */
+  font-weight: bold; /* Membuatnya lebih tebal */
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='black' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Mengubah warna border di sekitar tombol saat tidak aktif (opsional) */
+.navbar-toggler {
+  border-color: #486aa8;
+}
+
+/* Mengubah warna border saat tombol di-klik (opsional) */
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.25rem #486aa8;
+}
+/* Menghapus gaya yang tidak perlu */
+.container {
+  background-color: transparent; /* Hapus background putih agar tidak aneh */
+}
+
+/* Penataan Form Utama */
+.card {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 5px 15px 20px rgba(0, 0, 0, 0.4);
+  border-radius: 25px;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+#transactionForm .form-label {
+  font-weight: 500; /* Membuat label sedikit lebih tebal */
+  color: #333;
+}
+
+#transactionForm .form-control,
+#transactionForm .input-group-text {
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem; /* Sudut lebih tumpul */
+  border: 1px solid #ced4da;
+}
+
+#transactionForm .form-control:focus {
+  border-color: #86b7fe;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+#transactionForm .input-group-text {
+  background-color: #e9ecef;
+  font-weight: 500;
+}
+
+/* Grup untuk Radio Button (Tipe & Akun) */
+.radio-group-custom {
+  background-color: #f8f9fa;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid #dee2e6;
+}
+
+#transactionForm .form-check-input {
+  cursor: pointer;
+}
+
+#transactionForm .form-check-label {
+  cursor: pointer;
+}
+
+/* Gaya Tombol Submit */
+#transactionForm .btn-primary {
+  background-color: #0d6efd;
+  border: none;
+  transition: background-color 0.2s ease-in-out;
+}
+
+#transactionForm .btn-primary:hover {
+  background-color: #0b5ed7;
+}
+/* Gaya untuk Opsi Kategori yang Dinamis */
+
+#categoryRadioGroup {
+  display: flex;
+  flex-wrap: wrap; /* Agar tile bisa pindah baris jika tidak muat */
+  gap: 10px; /* Jarak antar tile */
+}
+
+.category-tile {
+  margin: 0 !important; /* Hapus margin default dari form-check-inline */
+}
+
+/* Sembunyikan radio button asli */
+.category-tile .form-check-input {
+  display: none;
+}
+
+/* Gaya label sebagai tombol/tile yang bisa dipilih */
+.category-tile .form-check-label {
+  display: block;
+  padding: 8px 16px;
+  border: 1px solid #dee2e6;
+  border-radius: 20px; /* Membuat sudut menjadi sangat tumpul (pill shape) */
+  cursor: pointer;
+  background-color: #f8f9fa;
+  color: #495057;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Gaya saat tile dipilih (radio button di belakangnya aktif) */
+.category-tile .form-check-input:checked + .form-check-label {
+  background-color: #0d6efd; /* Warna primer Bootstrap */
+  color: white;
+  border-color: #0d6efd;
+}
+
+/* Gaya saat kursor mouse di atas tile */
+.category-tile .form-check-label:hover {
+  background-color: #e2e6ea;
+}
+
+.category-tile .form-check-input:checked + .form-check-label:hover {
+  background-color: #0b5ed7; /* Warna primer lebih gelap saat hover */
+}

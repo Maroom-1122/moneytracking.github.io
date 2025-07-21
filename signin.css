@@ -1,0 +1,92 @@
+/* Gaya Khusus untuk Halaman Login */
+
+/* Header Halaman Login */
+.header-custom {
+  background-color: #8cb6e5;
+  padding: 0.5rem 0;
+}
+.header-custom .navbar-brand {
+  color: #2563eb;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+/* Kontainer dan Kartu Login */
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  padding: 2rem 0;
+}
+.login-card {
+  max-width: 450px;
+  width: 100%;
+  border: none;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+.h1,
+h1 {
+  font-weight: 700;
+}
+
+/* Form dan Tombol Login */
+.btn-custom-login {
+  background-color: #2563eb;
+  border-color: #2563eb;
+  color: white;
+  font-weight: 590;
+  padding: 0.75rem 1rem;
+}
+.btn-custom-login:hover {
+  background-color: #2054c5;
+  border-color: #2054c5;
+  color: white;
+}
+.form-control-lg {
+  padding: 0.8rem 1rem;
+  background-color: #f0f0f0;
+  border: none;
+}
+.form-control-lg:focus {
+  background-color: #f0f0f0;
+  box-shadow: 0 0 0 0.25rem rgba(37, 99, 235, 0.25);
+}
+body {
+  /* Diperlukan agar elemen ::before bisa diposisikan relatif terhadap body */
+  position: relative;
+  overflow: hidden; /* Mencegah blur 'bocor' ke luar halaman */
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Posisikan lapisan ini di belakang semua konten lain */
+
+  /* Atur gambar logo sebagai background */
+  background-image: url("logomt-removebg-preview.png"); /* Pastikan path ini benar */
+  background-size: cover; /* Agar gambar menutupi seluruh area */
+  background-position: center; /* Posisikan gambar di tengah */
+
+  /* INI BAGIAN PENTING: Terapkan efek blur */
+  filter: blur(
+    5px
+  ); /* Anda bisa mengubah nilai '5px' untuk menambah/mengurangi blur */
+
+  /* (Opsional) Tambahkan lapisan gelap agar form lebih mudah terbaca */
+  /* Hapus atau sesuaikan bagian 'background-color' ini jika tidak diinginkan */
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Pastikan konten utama tidak terpengaruh */
+.login-container,
+.header-custom,
+footer {
+  position: relative;
+  z-index: 1;
+}

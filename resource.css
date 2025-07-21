@@ -1,0 +1,187 @@
+/* Variabel Warna & Font Kustom */
+:root {
+  --primary-font: "Poppins", sans-serif;
+  --secondary-font: "Lora", serif;
+  --dark-blue: #343a40;
+  --appointments-btn-bg: #8c7d75;
+  --resources-bg: #f7faf7; /* Warna hijau tua dari screenshot */
+  --download-btn-bg: #486aa8; /* Warna tombol download dari screenshot */
+}
+
+/* Gaya Umum */
+body {
+  color: #1f2937;
+  font-family: "Segoe UI";
+  line-height: 1.6;
+  background-color: rgb(204, 223, 226);
+  font-size: var(--font-size-base);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.logo {
+  font-family: var(--secondary-font);
+  color: #f7faf7;
+}
+
+.logo {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.logo-di-navbar {
+  height: 65px;
+  width: auto;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.navbar {
+  min-height: 80px;
+}
+
+#hero-section .navbar {
+  color: #003366;
+}
+/* Warna default untuk link Home, Courses, Resources */
+.navbar-nav .nav-link {
+  color: #003366 !important; /* Warna biru tua */
+  font-weight: 600; /* Membuat teks sedikit lebih tebal */
+  transition: color 0.3s ease; /* Transisi warna yang halus */
+}
+
+/* Warna saat kursor mouse di atas link */
+.navbar-nav .nav-link:hover {
+  color: #486aa8 !important; /* Warna biru yang lebih cerah saat disentuh mouse */
+}
+
+/* Warna untuk link yang sedang aktif (misal: Home) */
+.navbar-nav .nav-link.active {
+  color: #e0de5b !important; /* Warna berbeda untuk menandakan halaman aktif */
+  font-weight: bold; /* Membuatnya lebih tebal */
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='black' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Mengubah warna border di sekitar tombol saat tidak aktif (opsional) */
+.navbar-toggler {
+  border-color: #486aa8;
+}
+
+/* Mengubah warna border saat tombol di-klik (opsional) */
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.25rem #486aa8;
+}
+/* Menghapus gaya yang tidak perlu */
+.container {
+  background-color: transparent; /* Hapus background putih agar tidak aneh */
+}
+
+.btn-appointments {
+  background-color: var(--appointments-btn-bg);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+.btn-appointments:hover {
+  background-color: #7a6e66;
+  color: white;
+}
+
+/* Bagian Grid Resources */
+.resources-grid {
+  background-color: var(--resources-bg);
+}
+.resources-grid h5 {
+  color: #394f64; /* Teks judul menjadi putih */
+  min-height: 48px; /* Memberi tinggi minimum agar sejajar */
+}
+
+/* Gambar Resource */
+.resource-image {
+  border: 3px solid rgba(255, 255, 255, 0.8);
+  background-color: white;
+  padding: 8px;
+  border-radius: 5px;
+  width: 100%;
+  height: 300px;
+  object-fit: cover; /* Memastikan gambar terisi rapi */
+  object-position: top center; /* Fokus pada bagian atas gambar */
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+.resource-image:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Tombol Download */
+.btn-resource-download {
+  background-color: #324774;
+  color: rgb(218, 189, 59);
+  padding: 12px 30px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.btn-resource-download:hover {
+  background-color: #486aa8;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.btn-secondary-custom {
+  background-color: #324774;
+  color: rgb(218, 189, 59);
+  padding: 12px 30px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.btn-secondary-custom:hover {
+  background-color: #486aa8;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Kelas untuk Animasi Scroll Fade-in */
+.fade-in-element {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-element.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#hero-section-courses {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Membuat tinggi section 100% dari tinggi layar */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("image/tugujogja.jpg");
+  background-size: cover;
+  background-position: center; /* Posisikan gambar di tengah */
+  background-repeat: no-repeat;
+}
+
+#hero-section-courses .navbar {
+  background: transparent !important; /* Membuat navbar transparan */
+}
+
+#hero-section-courses .logo,
+#hero-section-courses .text-white {
+  color: #ffffff !important;
+}
