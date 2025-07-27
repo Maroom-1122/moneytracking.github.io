@@ -321,10 +321,10 @@ document.addEventListener("DOMContentLoaded", function () {
   if (accountPage) {
     const transactions = getTransactions();
     const accountBalances = {
-      Rekening: 0,
-      Tabungan: 0,
+      "Rekening": 0,
+      "Tabungan": 0,
       "Kartu Kredit": 0,
-      Tunai: 0,
+      "Tunai": 0,
     };
     transactions.forEach((trx) => {
       if (accountBalances.hasOwnProperty(trx.account)) {
